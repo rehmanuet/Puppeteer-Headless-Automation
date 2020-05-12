@@ -6,3 +6,4 @@ logs/*
 debug.log
 selenium_standalone_chrome.cid
 .idea/*
+example.png
