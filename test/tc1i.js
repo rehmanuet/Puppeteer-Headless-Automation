@@ -1,14 +1,22 @@
-const puppeteer = require('puppeteer');
+
+const puppeteer = require('puppeteer')
 const iPhone = puppeteer.devices['iPhone 6'];
-try {
-(async () => {
- 
-  const browser = await puppeteer.launch({headless: false});
+const assert = require('assert')
+
+let browser
+let page
+
+
+describe('Chrome Headless Search', async() => {
+  it('navigates to search page and open the first resut and assert that', async () => { 
+
+  browser = await puppeteer.launch({headless: false});
   console.log("Browser Status: "+browser.isConnected())
-  const page = await browser.newPage();
+  page = await browser.newPage();
   await page.emulate(iPhone);
   await page.goto('https://google.com',{waitUntil:"networkidle2"});
   console.log(browser.isConnected())
+  
   const query = await page.$("[name='q']")
   await query.click()
   await query.type("NETSOL",{ delay: 50 })
@@ -19,19 +27,17 @@ try {
   await page.waitForNavigation({waitUntil: 'networkidle0'});
 
   const result= await page.$("#rso > div > div > div > div > div > a > div > div")
- 
-  const text = await page.evaluate(() => document.querySelector('#rso > div > div > div > div > div > a > div > div').textContent);
-  const text1 = await page.evaluate(() => document.querySelector('#rso > div > div > div > div > div > a > div').textContent);
-  console.log(text)
-  console.log(text1)
+  const title = await page.evaluate(() => document.querySelector('#rso > div > div > div > div > div > a > div > div').textContent);
+  const text = await page.evaluate(() => document.querySelector('#rso > div > div > div > div > div > a > div').textContent);
+  console.log("Title: "+title)
+  console.log("First Result: "+text)
+
   await result.click()
   await page.waitForNavigation({waitUntil: 'networkidle0'});
-  
-  gitconsole.log(page.url())
- await browser.close()
-}
-)();
+  console.log(page.url())
 
-} catch (err) {
-  console.error(err)
-}
+  assert(page.url(),text)
+  await browser.close()
+}).timeout(60000)
+});
+
