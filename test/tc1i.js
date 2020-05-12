@@ -11,11 +11,13 @@ try {
   console.log(browser.isConnected())
   const query = await page.$("[name='q']")
   await query.click()
-  await query.type("NETSOL")
-  await page.waitFor(4000)
+  await query.type("NETSOL",{ delay: 50 })
+ 
+
   const search = await page.$("[aria-label='Google Search']")
   await search.click()
-  await page.waitFor(4000)
+  await page.waitForNavigation({waitUntil: 'networkidle0'});
+
   const result= await page.$("#rso > div > div > div > div > div > a > div > div")
  
   const text = await page.evaluate(() => document.querySelector('#rso > div > div > div > div > div > a > div > div').textContent);
@@ -25,8 +27,7 @@ try {
   await result.click()
   await page.waitForNavigation({waitUntil: 'networkidle0'});
   
-  
-  console.log(page.url())
+  gitconsole.log(page.url())
  await browser.close()
 }
 )();
