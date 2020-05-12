@@ -12,7 +12,8 @@
     "puppeteer-core": "2.1.1"
   },
   "scripts": {
-    "test": "mocha test/tc1i.js"
+    "test": "mocha test/tc1i.js",
+    "dtest": "mocha test/tc1.js"
   },
   "author": "Abdur Rehman",
   "license": "MIT"

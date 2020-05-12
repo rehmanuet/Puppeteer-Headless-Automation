@@ -1,12 +1,17 @@
 const puppeteer = require('puppeteer');
-const iPhone = puppeteer.devices['iPhone 6'];
-const screenshot = 'example.png'
-try {
-(async () => {
+const assert = require('assert')
+
+let browser
+let page
 
 
-  const browser = await puppeteer.launch({headless: false});
-  const page = await browser.newPage();
+
+describe('Chrome Headless Desktop Search', async() => {
+  it('navigates to search page and open the first resut and assert that', async () => { 
+
+
+  browser = await puppeteer.launch({headless: false});
+  page = await browser.newPage();
   // const context = await browser.createIncognitoBrowserContext();
 
   page.setViewport({
@@ -22,8 +27,7 @@ try {
 
   await page.waitFor(4000)
   await search.click()
-
-  await page.waitFor(4000)
+  await page.waitForNavigation({waitUntil: 'networkidle0'});
 
   const options = await page.$$eval('div > div > div.r > a > h3', options => options.map(option =>option.textContent));
   for(i=0;i<options.length;i++){console.log(options[i])}
@@ -31,16 +35,12 @@ try {
   const divCount = await page.$$eval('div > div > div.r > a', divCount => divCount.map(divCount => divCount.textContent)); 
   for(i=0;i<divCount.length;i++){console.log(divCount[i])}
 
-  await page.screenshot({path: 'example.png'});
+  await page.screenshot({path: 'Desktop_tc1.png'});
 
   await browser.close()
-  console.log(browser.isConnected())
 
 
 
-}
-)();
 
-} catch (err) {
-  console.error(err)
-}
+}).timeout(60000)
+})

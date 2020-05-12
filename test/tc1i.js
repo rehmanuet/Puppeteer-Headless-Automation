@@ -1,6 +1,6 @@
 
 const puppeteer = require('puppeteer')
-const iPhone = puppeteer.devices['iPhone 6'];
+const iPhone = puppeteer.devices['iPhone X'];
 const assert = require('assert')
 
 let browser
@@ -37,7 +37,8 @@ describe('Chrome Headless Search', async() => {
   console.log(page.url())
 
   assert(page.url(),text)
+  await page.screenshot({path: 'iPhoneX_TC1.png'});
   await browser.close()
-}).timeout(60000)
+}).timeout(160000)
 });
 
