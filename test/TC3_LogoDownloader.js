@@ -11,7 +11,7 @@ describe("Chrome Headless Execution", async () => {
   it("should open the website then locate the logo and download it", async () => {
 
     browser = await puppeteer.launch({
-      headless: false
+      headless: true
     })
     page = await browser.newPage()
     await page.goto("https://www.uet.edu.pk/", {
@@ -22,7 +22,7 @@ describe("Chrome Headless Execution", async () => {
     let $imgPath = await page.evaluate(x => {
       return document.querySelector(".logo").src;
     });
-  
+    assert.ok($imgPath)
     console.log("Extracted Image URI: " + $imgPath)
     await page.goto($imgPath);
 

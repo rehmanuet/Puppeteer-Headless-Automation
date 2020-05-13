@@ -14,7 +14,7 @@
     "puppeteer-core": "2.1.1"
   },
   "scripts": {
-    "test": "mocha test/tc1i.js",
+    "test": "mocha test/TC3_LogoDownloader.js",
     "tc1": "mocha test/TC1_Desktop.js",
     "tc2": "mocha test/TC2_iPhoneX.js"
   },
