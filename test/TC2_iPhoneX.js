@@ -6,8 +6,8 @@ let browser
 let page
 
 
-describe('Chrome Headless Search', async () => {
-  it('navigates to search page and open the first resut and assert that', async () => {
+describe('Chrome Headless Search via iPhoneX', async () => {
+  it('navigates to search page and open the first result and assert that', async () => {
 
     browser = await puppeteer.launch({
       headless: true

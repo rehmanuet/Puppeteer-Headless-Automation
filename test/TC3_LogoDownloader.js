@@ -7,8 +7,8 @@ let browser
 let page
 
 
-describe("Alert Verifcation", async () => {
-  it(".....", async () => {
+describe("Chrome Headless Execution", async () => {
+  it("should open the website then locate the logo and download it", async () => {
 
     browser = await puppeteer.launch({
       headless: false

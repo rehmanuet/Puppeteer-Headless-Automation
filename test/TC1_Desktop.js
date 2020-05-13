@@ -6,7 +6,7 @@ let page
 
 
 describe('Chrome Headless Desktop Search', async () => {
-  it('navigates to search page and open the first resut and assert that', async () => {
+  it('navigates to search page and open the first result and assert that', async () => {
 
 
     browser = await puppeteer.launch({
