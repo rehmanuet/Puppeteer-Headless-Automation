@@ -14,10 +14,11 @@
     "puppeteer-core": "2.1.1"
   },
   "scripts": {
-    "test": "mocha test/TC4_Kayak.js",
-    "tc1": "mocha test/TC1_Desktop.js",
-    "tc2": "mocha test/TC2_iPhoneX.js",
-    "tc3": "mocha test/TC3_LogoDownloader.js"
+    "test": "mocha test/tc1_google_search.js",
+    "tc1": "mocha test/tc1_google_search.js",
+    "tc2": "mocha test/tc2_iphonex_emulation.js",
+    "tc3": "mocha test/tc3_logo_extractor.js",
+    "tc4": "mocha test/tc4_search_hotel_kayak.js"
   },
   "author": "Abdur Rehman",
   "license": "MIT"
