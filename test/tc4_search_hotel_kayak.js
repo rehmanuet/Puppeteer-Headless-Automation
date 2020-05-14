@@ -4,8 +4,8 @@ const assert = require("assert");
 let browser
 let page
 
-describe("Navigate to Kayak's Hotel Page with Chromium Headless", async () => {
-  it("should open the website then locate the logo and download it", async () => {
+describe("Navigate to Kayak's Hotel Page with Chromium Headless Browser", async () => {
+  it("should search the hoel for the specified location", async () => {
 
     browser = await puppeteer.launch({
       headless: true
