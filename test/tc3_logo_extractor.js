@@ -6,7 +6,6 @@ const filesystem = require("fs");
 let browser
 let page
 
-
 describe("Chrome Headless Execution", async () => {
   it("should open the website then locate the logo and download it", async () => {
 

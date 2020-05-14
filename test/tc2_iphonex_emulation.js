@@ -1,6 +1,6 @@
 const puppeteer = require('puppeteer')
 const iPhone = puppeteer.devices['iPhone X'];
-const assert = require('assert')
+const assert = require('assert');
 
 let browser
 let page
@@ -25,7 +25,6 @@ describe('Chrome Headless Search via iPhoneX', async () => {
     await query.type("NETSOL", {
       delay: 50
     })
-
 
     const search = await page.$("[aria-label='Google Search']")
     await search.click()

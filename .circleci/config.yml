@@ -1,19 +1,20 @@
-# Javascript Node CircleCI 2.0 configuration file
+# CircleCI Config FIle for Puppeteer Automation Framwork
 #
-# @
+# @author: Abdur Rehman Ashraf
+# @Email: rehmanuet@yahoo.com
+# @Linkedin: https://www.linkedin.com/in/rehmanuet/
 #
-@aurthor
 version: 2
 jobs:
   build:
     docker:
       - image: circleci/node:latest
-   
-   working_directory: ~/repo
+
+    working_directory: ~/repo
+
     steps:
       - checkout
 
-      # Download and cache dependencies
       - restore_cache:
           keys:
           - v1-dependencies-{{ checksum "package.json" }}
@@ -21,7 +22,7 @@ jobs:
           - v1-dependencies-
 
       - run: npm install
-      # TODO - get this cached so that you don't have to pull down the binaries each time
+
       - run:
           name: Update
           working_directory: /

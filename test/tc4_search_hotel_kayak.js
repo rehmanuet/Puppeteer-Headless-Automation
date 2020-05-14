@@ -36,7 +36,7 @@ describe("Navigate to Kayak's Hotel Page with Chromium Headless Browser", async 
     let submit = await page.$(".searchButton")
     await submit.click()
     await page.waitForNavigation({
-      waitUntil: 'networkidle0'
+       waitUntil: 'networkidle0'
     });
     console.log( "Redirected URL: "+ await page.url())
     assert.ok(page.url())
