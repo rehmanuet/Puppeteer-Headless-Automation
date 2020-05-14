@@ -4,7 +4,7 @@ const assert = require("assert");
 let browser
 let page
 
-describe("Chrome Headless Execution", async () => {
+describe("Navigate to Kayak's Hotel Page with Chromium Headless", async () => {
   it("should open the website then locate the logo and download it", async () => {
 
     browser = await puppeteer.launch({
@@ -38,7 +38,7 @@ describe("Chrome Headless Execution", async () => {
     await page.waitForNavigation({
       waitUntil: 'networkidle0'
     });
-    console.log( "Redirected URL: "+await page.url())
+    console.log( "Redirected URL: "+ await page.url())
     assert.ok(page.url())
     browser.close()
 
