@@ -1,32 +1,29 @@
-# WebdriverIO v6 | Cucumber | Docker | CircleCI | Travis CI
+# Puppeteer | Mocha | Circle CI | Travis CI
 <sup>Live Build Status:</sup><br />
 [![CircleCI](https://circleci.com/gh/rehmanuet/Puppeteer-Headless-Automation.svg?style=svg&circle-token=f64d8e48db08547ffb28916c6b9a69517aecdf67)](https://github.com/rehmanuet/Puppeteer-Headless-Automation/blob/master/README.md)[![CircleCI](https://circleci.com/gh/rehmanuet/WebdriverIO-Cucumber-Dockerized.svg?style=shield&circle-token=f64d8e48db08547ffb28916c6b9a69517aecdf67)](https://github.com/rehmanuet/Puppeteer-Headless-Automation/blob/master/README.md)[![Build Status](https://travis-ci.org/rehmanuet/Puppeteer-Headless-Automation.svg?branch=master)](https://travis-ci.org/rehmanuet/Puppeteer-Headless-Automation)
 
-POC of WebdriverIO v6 on React-Based application with Mocha, Cucumber, ChaiJS and Allure
+POC of Puppeteer Automation Framework on different application with Mocha as a test-runner
 <meta property="og:image" content="https://github.com/rehmanuet/DataEssential/blob/master/junk/pre.png?raw=true"/>
 ## Stack
 
-<img src="https://img.stackshare.io/service/4185/webdriver.io.png?raw=true?raw=true" width="90" height="90" /><img src="https://cdn.freebiesupply.com/logos/large/2x/cucumber-logo-png-transparent.png?raw=true" width="90" height="90" /><img src="https://camo.githubusercontent.com/c14c2f174870d15a031245b3d3cd57f648e50fb2/68747470733a2f2f7777772e706172616469676d616469676974616c2e636f6d2f77702d636f6e74656e742f75706c6f6164732f323031372f30322f312e706e67?raw=true" height="90"/><img src="https://i.pinimg.com/originals/48/4d/9a/484d9a03c676a55671a9d257a48c4378.png?raw=true?raw=true" width="110" height="80" /><img src="https://images.ctfassets.net/k62me4xboi1l/55FkKC6k4E6I80qOOu2A0M/4b03468aed1c04a639acfa2c513cbcae/angular-sdk-03.svg" width="110" height="90" /><img src="https://www.docker.com/sites/default/files/d8/2019-07/vertical-logo-monochromatic.png?raw=true" width="90" height="90" /><img src="https://travis-ci.org/images/logos/TravisCI-Mascot-1.png?raw=true" width="90" height="90" />
+<img src="https://user-images.githubusercontent.com/10379601/29446482-04f7036a-841f-11e7-9872-91d1fc2ea683.png?raw=true?raw=true" width="80" height="90" /><img src="https://camo.githubusercontent.com/af4bf83ab2ca125346740f9961345a24ec43b3a9/68747470733a2f2f636c6475702e636f6d2f78465646784f696f41552e737667?raw=true" width="90" height="90" /><img src="https://i.pinimg.com/originals/48/4d/9a/484d9a03c676a55671a9d257a48c4378.png?raw=true?raw=true" width="110" height="80" /><img src="https://images.ctfassets.net/k62me4xboi1l/55FkKC6k4E6I80qOOu2A0M/4b03468aed1c04a639acfa2c513cbcae/angular-sdk-03.svg" width="110" height="90" /><img src="https://travis-ci.org/images/logos/TravisCI-Mascot-1.png?raw=true" width="90" height="90" />
 
 ## Features
 
 ```
-WebDriverIO: v6 (Released: March-2020)
-Test Application: ReactJS 
-Design Pattern: Page Object Model (3-Layers)
-Assertion: Chai Assertion with Promises Handling
-Framework: Mocha Framework and Jasmine Framework
+Puppeteer: 
+Test Application: ReactJS / AngularJS 
+Framework: Mocha Framework
 BDD: Cucumber
-Reporter: Allure Report and Spec Reporter
-Runner: Local (Native Chrome Driver) and Selenium Standalone Server
-Container: Docker
-CICD: CircleCI, Travis CI and GitHub Action Pipeline
+Reporter: Spec Reporter
+Runner: Headless and Non-Headless
+CICD: CircleCI and Travis CI
 ```
 
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine or Docker Container for development and testing purposes.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
 ### Prerequisites
 
@@ -41,92 +38,32 @@ These instructions will get you a copy of the project up and running on your loc
 A step by step procedure to run the project on local machine
 
 ```
-1) Clone the repo with "git clone https://github.com/rehmanuet/WebdriverIO-Cucumber-Dockerized.git"
+1) Clone the repo with "git clone https://github.com/rehmanuet/Puppeteer-Headless-Automation.git"
 2) Open the cloned directory in VS Code.
 3) Execute "npm install" (It'll download all the dependencies mentioned in package.json)
 ```
 
-## Execution on Local Machine (Peanut Butter)
+## Test Cases
 
-### To run Cucumber based test (Framework: Mocha, Reporting: Allure)
+##### TC1: Navigates to Search Page and query for the Keyword and scrap the results.
+##### TC2: iPhone X emulation for the Assert Flow.
+##### TC3: Opens the website and then locates the logo to download it.
+##### TC4: Opens Kayak.com, Searches for Specified Hotel
+
+## Execution on Local Machine (Headless)
+
+###### TEST_CASE_ID = tc1, tc2, tc3, tc4
 ```
-npm run local_cucumber_test
+npm run <TEST_CASE_ID>
 ```
+###### TEST_CASE_ID = tc1, tc2, tc3, tc4
 
-### To run Kayak's Flow (Framework: Mocha, Reporting: Allure)
-```
-npm run local_kayak_test
-```
-
-## Reporting (Spec and Allure Reporter)
-
-###### Allure Reporter
-
-```
-npm run show_report
-```
-
-<img src="https://raw.githubusercontent.com/rehmanuet/DataEssential/master/junk/Allure_Report.JPG?raw=true" width="900" height="400" />
-
-###### Spec Reporter
-
-<img src="https://raw.githubusercontent.com/rehmanuet/DataEssential/master/junk/spec%20reporter.JPG?raw=true" width="900"/>
-
-
-========================================
-
-## Running WebdriverIO Tests on Docker (Things about get little dirty)
-
-
-Now time has come to show you how to use docker to run tests. Here I would setup a Selenium Standalone server on docker and run the tests.
-
-### Prerequisites
-
-Docker needs to be installed on your machine. One can download it from [Docker's website](https://www.docker.com) and follow the [documentation](https://docs.docker.com/) accordingly.
-It is assumed that , one knows the basics of Docker for this tutorial unless you live in stone-age :D .
-
-### Setup
-To ensure Docker is installed sucessfully , type :
-``` shell
-docker -v
-```
-and one would see a similar output , depending on the version of docker installed :
-``` shell
-C:\Users\abdur.rehman>docker -v
-Docker version 19.03.2, build 6a30dfc
-``` 
-
-### Step 0 - Download the docker images for node v10 and Selenium Standalone Server
-
-``` shell
-docker pull node:10
-docker pull vvoyer/selenium-standalone:latest
-```
-One could pull 'node-firefox' if they want to work with firefox node (Personally I hate firefox, So goddamn slow). 
-For more information about the different images one can work with , please look at [Docker Selenium Images List](https://github.com/SeleniumHQ/docker-selenium/blob/master/README.md)
-
-
-### Step 1 - Build the Docker Container
-``` shell
-docker build .
-```
-
-Keep calm , It will take sometime to get ready.
-
-### Step 2 - Compose Docker file
-``` shell
-docker-compose build
+##### To run TC1: Navigates to Search Page and query for the Keyword and scrap the results.
 
 ```
-
-### Step 3 - Initializing Docker and Running the tests
-
-``` shell
-docker-compose up
+npm run tc1
 ```
-<img src="https://github.com/rehmanuet/DataEssential/blob/master/junk/docker.PNG?raw=true" width="900"/>
-
-
+And so on.
 
 
 _contact:`rehmanuet[at]yahoo[dot]com`_ *or* _[LinkedIn](https://www.linkedin.com/in/rehmanuet/)_
