@@ -14,7 +14,6 @@ POC of Puppeteer Automation Framework on different application with Mocha as a t
 Puppeteer: 
 Test Application: ReactJS / AngularJS 
 Framework: Mocha Framework
-BDD: Cucumber
 Reporter: Spec Reporter
 Runner: Headless and Non-Headless
 CICD: CircleCI and Travis CI
