@@ -1,6 +1,7 @@
 # Puppeteer | Mocha | Circle CI | Travis CI
 <sup>Live Build Status:</sup><br />
 [![CircleCI](https://circleci.com/gh/rehmanuet/Puppeteer-Headless-Automation.svg?style=svg&circle-token=f64d8e48db08547ffb28916c6b9a69517aecdf67)](https://github.com/rehmanuet/Puppeteer-Headless-Automation/blob/master/README.md)[![CircleCI](https://circleci.com/gh/rehmanuet/WebdriverIO-Cucumber-Dockerized.svg?style=shield&circle-token=f64d8e48db08547ffb28916c6b9a69517aecdf67)](https://github.com/rehmanuet/Puppeteer-Headless-Automation/blob/master/README.md)
+[![Build Status](https://api.travis-ci.org/rehmanuet/Puppeteer-Headless-Automation.svg?branch=master)](https://travis-ci.org/rehmanuet/Puppeteer-Headless-Automation)
 
 
 
