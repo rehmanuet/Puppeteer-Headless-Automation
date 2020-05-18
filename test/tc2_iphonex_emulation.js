@@ -23,7 +23,7 @@ describe('Chrome Headless Search via iPhoneX', async () => {
     const query = await page.$("[name='q']")
     await query.click()
     await query.type("NETSOL", {
-      delay: 50
+      delay: 60
     })
 
     const search = await page.$("[aria-label='Google Search']")
@@ -35,6 +35,7 @@ describe('Chrome Headless Search via iPhoneX', async () => {
     const result = await page.$("#rso > div > div > div > div > div > a > div > div")
     const title = await page.evaluate(() => document.querySelector('#rso > div > div > div > div > div > a > div > div').textContent);
     const text = await page.evaluate(() => document.querySelector('#rso > div > div > div > div > div > a > div').textContent);
+   
     console.log("Title: " + title)
     console.log("First Result: " + text)
 
