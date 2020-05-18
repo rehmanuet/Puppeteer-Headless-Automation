@@ -29,7 +29,7 @@ describe("Navigate to Kayak's Hotel Page with Chromium Headless Browser", async 
     let search_field = await page.$$("[aria-label='Destination input']")
     await search_field[2].click()
     await page.keyboard.type("BCN", {
-      delay: 500
+      delay: 450
     })
     await page.keyboard.press("Tab");
     await page.keyboard.press("Tab");
